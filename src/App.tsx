@@ -41,14 +41,14 @@ const birthdayConfig = {
 };
 
 // Dynamically import all images and videos from src/assets/images
-const imageModules = import.meta.glob('./assets/images/*.{png,jpg,jpeg,PNG,JPG,JPEG}', { eager: true });
-const imagePaths = Object.values(imageModules).map(mod => mod.default);
+const imageModules = import.meta.glob<{ default: string }>('./assets/images/*.{png,jpg,jpeg,PNG,JPG,JPEG}', { eager: true });
+const imagePaths: string[] = Object.values(imageModules).map(mod => mod.default);
 
-const videoModules = import.meta.glob('./assets/images/*.mp4', { eager: true });
-const videoPaths = Object.values(videoModules).map(mod => mod.default);
+const videoModules = import.meta.glob<{ default: string }>('./assets/images/*.mp4', { eager: true });
+const videoPaths: string[] = Object.values(videoModules).map(mod => mod.default);
 
-const audioModules = import.meta.glob('./assets/images/*.mp3', { eager: true });
-const audioPaths = Object.values(audioModules).map(mod => mod.default);
+const audioModules = import.meta.glob<{ default: string }>('./assets/images/*.mp3', { eager: true });
+const audioPaths: string[] = Object.values(audioModules).map(mod => mod.default);
 
 function App() {
   // Page states
