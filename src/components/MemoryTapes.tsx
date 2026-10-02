@@ -661,15 +661,15 @@ export function MemoryTapes({ videoPaths }: MemoryTapesProps) {
             viewport={{ once: true }}
             className="font-display text-3xl md:text-5xl lg:text-6xl text-on-background font-bold tracking-tight mb-4"
           >
-            Our Motion Archive <span className="text-dusty-rose font-serif italic">📼</span>
+            Our Motion Archive 
           </motion.h2>
 
-          <p className="text-on-surface-variant text-sm md:text-base leading-relaxed font-sans max-w-xl mx-auto">
-            Every smile, spontaneous laugh, and candid glance preserved on tape. Continuous auto-play with 90° rotation controls.
+          <p className="font-note text-on-surface-variant text-base md:text-lg leading-relaxed italic max-w-xl mx-auto font-light">
+            Because some memories are too alive to stay still — every candid laugh, sweet glance, and joyful moment frozen in motion forever. 🌷
           </p>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-7">
+          {/* <div className="flex flex-wrap items-center justify-center gap-2 mt-7">
             {[
               { id: 'all', label: `All Tapes (${tapes.length})` },
               { id: 'film', label: '🎞️ 35mm Film' },
@@ -694,7 +694,7 @@ export function MemoryTapes({ videoPaths }: MemoryTapesProps) {
                 </button>
               );
             })}
-          </div>
+          </div> */}
         </div>
 
         {/* ════════════════════════════════════════════════════════════
