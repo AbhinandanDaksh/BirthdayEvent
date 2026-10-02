@@ -12,6 +12,7 @@ import {
   type CarouselApi,
 } from "./components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { MemoryTapes } from "./components/MemoryTapes";
 import './App.css';
 
 function FadeIn({ children, delay = 0, className = "", style = {}, viewportMargin = "-100px", as = "div", ...props }) {
@@ -216,7 +217,7 @@ function App() {
       badge: "Chapter 01",
       title: "The Very First Spark",
       memory: "Where it all began — the very first conversation, the initial smiles, and a connection that instantly felt warm and effortless.",
-      photoIdx: 0,
+      photoIdx: 5,
       tag: "The Spark ✨",
       icon: "auto_awesome"
     },
@@ -225,7 +226,7 @@ function App() {
       badge: "Chapter 02",
       title: "Late Night Talks & Endless Laughs",
       memory: "From random midnight messages to sharing daily little updates. All those moments that turned ordinary days into cherished memories.",
-      photoIdx: 1,
+      photoIdx: 6,
       tag: "Comfort & Joy ☕",
       icon: "favorite"
     },
@@ -234,7 +235,7 @@ function App() {
       badge: "Chapter 03",
       title: "Standing By Each Other",
       memory: "Through every high and low, celebrating small wins and always being a safe corner to share anything without hesitation.",
-      photoIdx: 2,
+      photoIdx: 7,
       tag: "Special Bond 🌷",
       icon: "eco"
     },
@@ -243,7 +244,7 @@ function App() {
       badge: "Special Milestone",
       title: "Celebrating You 💕",
       memory: "A day dedicated entirely to you. Looking back at all the memories we've made and smiling at how wonderful you truly are.",
-      photoIdx: 3,
+      photoIdx: 8,
       tag: "Birthday Girl 👑",
       icon: "cake"
     },
@@ -252,7 +253,7 @@ function App() {
       badge: "Unwritten Pages",
       title: "The Best Is Yet To Come",
       memory: "More trips, more spontaneous adventures, more heartfelt conversations, and countless more reasons to laugh together.",
-      photoIdx: 4,
+      photoIdx: 9,
       tag: "Forever Ahead 🚀",
       icon: "star"
     }
@@ -810,7 +811,7 @@ function App() {
               <FadeIn className="polaroid bg-surface-container-lowest p-4 pb-12 shadow-xl transform rotate-[-4deg] md:absolute md:top-0 md:left-[4%] w-64 border border-surface-variant/40 z-10 rounded-sm">
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-amber-200 via-amber-400 to-amber-600 shadow-md border border-amber-100/60 z-20"></span>
                 <div className="aspect-square bg-surface-container-low mb-4 overflow-hidden rounded-xs relative">
-                  <img alt="Memory 1" className="w-full h-full object-cover" src={getImageUrl(0, 0)} />
+                  <img alt="Memory 1" loading="lazy" decoding="async" className="w-full h-full object-cover" src={getImageUrl(0, 0)} />
                 </div>
                 <p className="font-note text-center text-on-surface-variant text-base italic">A beautiful snapshot.</p>
               </FadeIn>
@@ -819,7 +820,7 @@ function App() {
               <FadeIn delay={0.1} className="polaroid bg-surface-container-lowest p-4 pb-12 shadow-xl transform rotate-[5deg] md:absolute md:top-6 md:right-[6%] w-64 border border-surface-variant/40 z-10 rounded-sm">
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-amber-200 via-amber-400 to-amber-600 shadow-md border border-amber-100/60 z-20"></span>
                 <div className="aspect-square bg-surface-container-low mb-4 overflow-hidden rounded-xs relative">
-                  <img alt="Memory 2" className="w-full h-full object-cover" src={getImageUrl(1, 1)} />
+                  <img alt="Memory 2" loading="lazy" decoding="async" className="w-full h-full object-cover" src={getImageUrl(1, 1)} />
                 </div>
                 <p className="font-note text-center text-on-surface-variant text-base italic">A perfect day.</p>
               </FadeIn>
@@ -828,7 +829,7 @@ function App() {
               <FadeIn delay={0.3} className="polaroid bg-surface-container-lowest p-4 pb-12 shadow-xl transform rotate-[3deg] md:absolute md:top-[38%] md:left-1/2 md:-translate-x-1/2 w-64 border border-surface-variant/40 z-10 rounded-sm">
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-amber-200 via-amber-400 to-amber-600 shadow-md border border-amber-100/60 z-20"></span>
                 <div className="aspect-square bg-surface-container-low mb-4 overflow-hidden rounded-xs relative">
-                  <img alt="Memory 4" className="w-full h-full object-cover" src={getImageUrl(3, 3)} />
+                  <img alt="Memory 4" loading="lazy" decoding="async" className="w-full h-full object-cover" src={getImageUrl(3, 3)} />
                 </div>
                 <p className="font-note text-center text-on-surface-variant text-base italic">
                   A moment worth remembering.
@@ -839,7 +840,7 @@ function App() {
               <FadeIn delay={0.2} className="polaroid bg-surface-container-lowest p-4 pb-12 shadow-xl transform rotate-[-2deg] md:absolute md:top-[55%] md:left-[6%] w-64 border border-surface-variant/40 z-10 rounded-sm">
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-amber-200 via-amber-400 to-amber-600 shadow-md border border-amber-100/60 z-20"></span>
                 <div className="aspect-square bg-surface-container-low mb-4 overflow-hidden rounded-xs relative">
-                  <img alt="Memory 3" className="w-full h-full object-cover" src={getImageUrl(2, 2)} />
+                  <img alt="Memory 3" loading="lazy" decoding="async" className="w-full h-full object-cover" src={getImageUrl(2, 2)} />
                 </div>
                 <p className="font-note text-center text-on-surface-variant text-base italic">Unforgettable.</p>
               </FadeIn>
@@ -848,7 +849,7 @@ function App() {
               <FadeIn delay={0.4} className="polaroid bg-surface-container-lowest p-4 pb-12 shadow-xl transform rotate-[-5deg] md:absolute md:top-[49%] md:right-[4%] w-64 border border-surface-variant/40 z-10 rounded-sm">
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-amber-200 via-amber-400 to-amber-600 shadow-md border border-amber-100/60 z-20"></span>
                 <div className="aspect-square bg-surface-container-low mb-4 overflow-hidden rounded-xs relative">
-                  <img alt="Memory 5" className="w-full h-full object-cover" src={getImageUrl(4, 0)} />
+                  <img alt="Memory 5" loading="lazy" decoding="async" className="w-full h-full object-cover" src={getImageUrl(4, 0)} />
                 </div>
                 <p className="font-note text-center text-on-surface-variant text-base italic">
                   Another beautiful memory.
@@ -952,6 +953,8 @@ function App() {
                               <img
                                 src={getImageUrl(item.photoIdx, item.photoIdx)}
                                 alt={item.title}
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                               />
                             </div>
@@ -1062,7 +1065,7 @@ function App() {
                   title: "That Smile",
                   tag: "Pure Sunshine ☀️",
                   memory: "The kind that instantly lights up your entire face and makes any ordinary room feel warmer.",
-                  imgIdx: 3,
+                  imgIdx: 2,
                   fallbackIdx: 0,
                   rotate: "-2deg",
                   tapeColor: "bg-rose-100/90 border-rose-300/40"
@@ -1071,7 +1074,7 @@ function App() {
                   title: "That One Conversation",
                   tag: "Midnight Talks ☕",
                   memory: "When hours felt like minutes, talking about everything and nothing at all without ever checking the time.",
-                  imgIdx: 4,
+                  imgIdx: 9,
                   fallbackIdx: 1,
                   rotate: "2.5deg",
                   tapeColor: "bg-amber-100/90 border-amber-300/40"
@@ -1089,7 +1092,7 @@ function App() {
                   title: "That Day...",
                   tag: "Quiet Afternoon 🌷",
                   memory: "Nothing dramatic was planned, but the calm energy and peaceful silence made it deeply unforgettable.",
-                  imgIdx: 6,
+                  imgIdx: 9,
                   fallbackIdx: 3,
                   rotate: "2deg",
                   tapeColor: "bg-emerald-100/90 border-emerald-300/40"
@@ -1107,7 +1110,7 @@ function App() {
                   title: "The Energy You Bring",
                   tag: "Safe Space 🧸",
                   memory: "A gentle, grounding presence that makes every space feel a little more peaceful, cozy, and safe.",
-                  imgIdx: 2,
+                  imgIdx: 17,
                   fallbackIdx: 1,
                   rotate: "2deg",
                   tapeColor: "bg-rose-100/90 border-rose-300/40"
@@ -1133,6 +1136,8 @@ function App() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         src={getImageUrl(detail.imgIdx, detail.fallbackIdx)}
                         alt={detail.title}
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.04)] pointer-events-none" />
                     </div>
@@ -1212,6 +1217,8 @@ function App() {
                     <div className="aspect-square overflow-hidden bg-surface-container rounded-lg relative border border-surface-variant/30">
                       <img
                         src={path}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
                         alt={`Scrapbook Memory ${idx + 1}`}
                       />
@@ -1512,12 +1519,15 @@ function App() {
                 loop
                 muted
                 playsInline
+                preload="metadata"
               />
             ) : (
               <img
                 className="absolute inset-0 w-full h-full opacity-60 -rotate-90 scale-[2.5]"
                 src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200"
                 alt="Wildflowers garden"
+                loading="lazy"
+                decoding="async"
               />
             )}
             <div className="absolute inset-0 bg-black/20" />
@@ -1527,39 +1537,9 @@ function App() {
           </FadeIn>
         </section>
 
-        {/* Render extra videos if they exist */}
+        {/* Section: Memory Tapes & Vintage Motion Archive */}
         {videoPaths.length > 1 && (
-          <section className="py-20 px-6 relative bg-surface-container-low/10">
-            <div className="max-w-5xl mx-auto">
-              <FadeIn className="font-display text-3xl md:text-4xl text-dusty-rose text-center mb-12 font-semibold" as="h2">
-                Memory Tapes
-              </FadeIn>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {videoPaths.slice(1).map((path, idx) => (
-                  <FadeIn
-                    key={idx}
-                    className="bg-surface-container-lowest p-4 pb-8 rounded-sm shadow-sm border border-surface-variant/40 transform hover:scale-[1.02] transition-transform duration-300"
-                  >
-                    <div className="aspect-video bg-black rounded-md overflow-hidden relative border border-surface-variant/20 shadow-inner">
-                      <video
-                        src={path}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    <p className="font-note text-sm text-center text-on-surface-variant mt-4 italic font-medium">
-                      Memory Clip {idx + 1} 📹
-                    </p>
-                  </FadeIn>
-                ))}
-              </div>
-            </div>
-          </section>
+          <MemoryTapes videoPaths={videoPaths} />
         )}
 
         {/* Section 13: The Final Scrapbook Letter */}
@@ -1789,6 +1769,8 @@ function App() {
                 <img
                   src={lightboxImage.url}
                   alt={lightboxImage.caption}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </div>
